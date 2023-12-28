@@ -48,6 +48,8 @@ You can update the config from any of your projects and upgrade each of the othe
 
 It's not tested on windows, where symlinks don't work so well. 
 
+(try cmd /c mklink C:\Users\me\AppData\Roaming\Code\User\settings.json C:\git\config\.vscode\settings.json)
+
 Many don't like git submodules. Yes, I agree they are a [footer](https://en.wiktionary.org/wiki/footer#Etymology_3 "Scots word footer") but they do the job right for this purpose, at least, IMHO.
 
 
