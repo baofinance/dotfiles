@@ -5,11 +5,11 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "debug dig",
       "type": "node",
       "request": "launch",
-      "name": "debug TS",
       "program": "${workspaceFolder}/node_modules/ts-node/dist/bin.js",
-      "args": ["${workspaceFolder}/src/graphit.ts"],
+      "args": ["${workspaceFolder}/src/dig.ts", "${workspaceFolder}/test/aladdin-fx-market.yml"],
       "sourceMaps": true,
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
