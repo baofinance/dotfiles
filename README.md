@@ -20,7 +20,7 @@ e.g.
 
 `$ ln -s dotfiles/projectroot/.prettierrc .prettierrc`
 
-> [!TIP] If you already have e.g. a `.prettierrc`, before you create the symlink, you may want to
+> ![TIP] If you already have e.g. a `.prettierrc`, before you create the symlink, you may want to
 >
 >`$ diff dotfiles/projectroot/.prettierrc .prettierrc`
 >
@@ -30,8 +30,11 @@ There's no script to do this as others have done for good reasons [^1].
 
 [^1]: That's because:
   You may not want all of it and this way allows you to link just the files you need
+
   The commands are easy to get right, and if you don't get it right first time it's easy to fix.
+  
   It's a one-off command for a few files files, deal with it :-)
+  
   Any script needs tests, etc. and my cost-benefit analysis resulted in not writing a script
 
 So that there's a chance this might work on windows, do this:
