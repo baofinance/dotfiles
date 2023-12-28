@@ -18,3 +18,5 @@
     }
   ]
 }
+// TODO: add inputs here
+// as described in https://stackoverflow.com/questions/48273346/vscode-command-for-user-input-in-debug-launch-config
