@@ -1,16 +1,31 @@
 {
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"]
+  },
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/contracts/*": ["scripts/contracts/*"],
+      "@/utils/*": ["scripts/utils/*"],
+      "interfaces/*": ["contracts/f(x)/interfaces/*", "contracts/interfaces/*"],
+      "contracts/*": ["contracts/*"],
+      "@types": ["typechain-types"],
+      "@mocks/*": ["test/mocks/*", "contracts/mocks/*"]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "./out",
     "rootDir": "./src",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "declaration": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "./typechain-types", "./test", "./scripts"],
+  "exclude": ["node_modules"],
+  "files": ["./hardhat.config.ts"]
 }
  

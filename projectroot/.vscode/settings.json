@@ -1,15 +1,49 @@
 {
-  // project specific formatting
-  "editor.tabSize": 2,
+  // I think these go with the forge vscode extension
+  "solidity.packageDefaultDependenciesContractsDirectory": "contracts",
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "solidity.remappings": ["forge-std/=lib/forge-std/src/", "contracts/=contracts"],
+
+  // project specific formatting, so try and align with prettierrc
+  "prettier.documentSelectors": ["**/*.sol", "**/*.ts", "**/*.json", "**/*.yml"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "[typescript]": {
-    "editor.tabSize": 4
-  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "files.exclude": {
     "**/.git": true,
     "**/node_modules": true
   },
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.tabSize": 2,
+    "[typescript]": {
+    "editor.tabSize": 4
+  },
+  "search.exclude": {
+    "**/node_modules": true
+  },
+
+  //"solidity.formatter": "prettier", // this uses a .pretierrc , see https://github.com/prettier-solidity/prettier-plugin-solidity#configuration-file
+  //"solidity.formatter": "forge", // TODO: check against prettier
+  "[solidity]": {
+    //"editor.defaultFormatter": "JuanBlanco.solidity"
+    //"editor.defaultFormatter": "NomicFoundation.hardhat-solidity",
+  },
+
+  "markiscodecoverage.coverageThreshold": 80,
+
+  "workbench.colorCustomizations": {
+    // these below mess up the selection highlighting
+    //"markiscodecoverage.colorUncoveredLineText": "#FF7F2750",
+    //"markiscodecoverage.colorUncoveredLineText": "#FFFFFF"
+    //"editor.tokenColorCustomizations": {
+    //  "textMateRules": [
+    //      {
+    //          "scope": ["markiscodecoverage.colorUncoveredLineText"],
+    //          "settings": {
+    //              "foreground": "#FFFFFF"
+    //          }
+    //      }
+    //  ]
+    //}
+  }
 }
