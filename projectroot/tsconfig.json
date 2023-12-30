@@ -19,7 +19,7 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "outDir": "./out",
-    "rootDir": "./src",
+    // "rootDir": "./src", rootdir contains all source but the hardhat-config file is a source that isn't in rootDir
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "declaration": true
@@ -28,4 +28,3 @@
   "exclude": ["node_modules"],
   "files": ["./hardhat.config.ts"]
 }
- 
