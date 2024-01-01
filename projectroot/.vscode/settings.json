@@ -8,6 +8,7 @@
   "prettier.documentSelectors": ["**/*.sol", "**/*.ts", "**/*.json", "**/*.yml"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.exclude": {
@@ -15,11 +16,15 @@
     "**/node_modules": true
   },
   "editor.tabSize": 2,
-    "[typescript]": {
+  "[typescript]": {
     "editor.tabSize": 4
   },
   "search.exclude": {
     "**/node_modules": true
+  },
+  // csv file handling
+  "[csv][dynamic csv][tsv][csv (semicolon)]": {
+    "editor.stickyScroll.enabled": true
   },
 
   //"solidity.formatter": "prettier", // this uses a .pretierrc , see https://github.com/prettier-solidity/prettier-plugin-solidity#configuration-file
