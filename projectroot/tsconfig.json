@@ -22,6 +22,7 @@
     // "rootDir": "./src", rootdir contains all source but the hardhat-config file is a source that isn't in rootDir
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
     "declaration": true
   },
   "include": ["src/**/*.ts", "./typechain-types", "./test", "./scripts"],
