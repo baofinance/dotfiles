@@ -1,12 +1,12 @@
 {
-  "ts-node": {
-    // Do not forget to `npm i -D tsconfig-paths`
-    "require": ["tsconfig-paths/register"]
-  },
+  //"ts-node": {
+  // Do not forget to `yarn add -D tsconfig-paths`
+  //  "require": ["tsconfig-paths/register"]
+  //},
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "target": "ES2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "baseUrl": ".",
     "paths": {
       "@/contracts/*": ["scripts/contracts/*"],
@@ -25,7 +25,7 @@
     "strictNullChecks": true,
     "declaration": true
   },
-  "include": ["src/**/*.ts", "./typechain-types", "./test", "./scripts"],
+  "include": ["src/**/*.ts", "test/**/*.ts", "scripts/**/*.ts", "./typechain-types"],
   "exclude": ["node_modules"],
   "files": ["./hardhat.config.ts"]
 }
