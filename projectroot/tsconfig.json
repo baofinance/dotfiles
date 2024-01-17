@@ -14,7 +14,8 @@
       "interfaces/*": ["contracts/f(x)/interfaces/*", "contracts/interfaces/*"],
       "contracts/*": ["contracts/*"],
       "@types": ["typechain-types"],
-      "@mocks/*": ["test/mocks/*", "contracts/mocks/*"]
+      "@mocks/*": ["test/mocks/*", "contracts/mocks/*"],
+      "eat": ["lib/eat/src"]
     },
     "esModuleInterop": true,
     "sourceMap": true,
