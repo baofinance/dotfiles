@@ -27,6 +27,8 @@
   "[csv][dynamic csv][tsv][csv (semicolon)]": {
     "editor.stickyScroll.enabled": true
   },
+  // gnuplot
+  "gnuplot.watcher.delay": 1000,
 
   //"solidity.formatter": "prettier", // this uses a .pretierrc , see https://github.com/prettier-solidity/prettier-plugin-solidity#configuration-file
   //"solidity.formatter": "forge", // TODO: check against prettier
