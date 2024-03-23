@@ -1,8 +1,14 @@
 {
-  // I think these go with the forge vscode extension
-  "solidity.packageDefaultDependenciesContractsDirectory": "contracts",
+  // Tthese go with the forge vscode extension
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
   "solidity.packageDefaultDependenciesDirectory": "lib",
-  "solidity.remappings": ["forge-std/=lib/forge-std/src/", "contracts/=contracts"],
+  "solidity.compileUsingRemoteVersion": "0.8.25",
+  //   "solidity.remappings": [
+  //     "ds-test/=lib/forge-std/lib/ds-test/src/",
+  //     "forge-std/=lib/forge-std/src/",
+  //     "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
+  //     "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+  //   ],
 
   // project specific formatting, so try and align with prettierrc
   "prettier.documentSelectors": ["**/*.sol", "**/*.ts", "**/*.json", "**/*.yml"],
@@ -16,10 +22,7 @@
     "**/.git": true,
     "**/node_modules": true
   },
-  "editor.tabSize": 2,
-  "[typescript]": {
-    "editor.tabSize": 4
-  },
+  "editor.tabSize": 4,
   "editor.insertSpaces": true,
   "search.exclude": {
     "**/node_modules": true
@@ -36,6 +39,9 @@
   "[solidity]": {
     //"editor.defaultFormatter": "JuanBlanco.solidity"
     //"editor.defaultFormatter": "NomicFoundation.hardhat-solidity",
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
   },
 
   "markiscodecoverage.coverageThreshold": 80,
