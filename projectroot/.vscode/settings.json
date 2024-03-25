@@ -22,7 +22,7 @@
     "**/.git": true,
     "**/node_modules": true
   },
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "search.exclude": {
     "**/node_modules": true
@@ -37,6 +37,7 @@
   //"solidity.formatter": "prettier", // this uses a .pretierrc , see https://github.com/prettier-solidity/prettier-plugin-solidity#configuration-file
   //"solidity.formatter": "forge", // TODO: check against prettier
   "[solidity]": {
+    "editor.tabSize": 4
     //"editor.defaultFormatter": "JuanBlanco.solidity"
     //"editor.defaultFormatter": "NomicFoundation.hardhat-solidity",
   },
