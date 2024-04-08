@@ -46,6 +46,7 @@
   },
 
   "markiscodecoverage.coverageThreshold": 80,
+  "markiscodecoverage.searchCriteria": "lcov*.info",
 
   "workbench.colorCustomizations": {
     // these below mess up the selection highlighting
