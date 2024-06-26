@@ -13,7 +13,6 @@
       "options": {
         "singleQuote": false,
         "tabWidth": 4,
-        "explicitTypes": "preserve",
         "semi": true,
         "trailingComma": "all"
       }
@@ -41,5 +40,6 @@
         "parser": "yaml"
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-solidity"]
 }
