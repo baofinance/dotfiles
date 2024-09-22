@@ -2,9 +2,9 @@
 
 That's the hope, anyway.
 
-The idea is that you share config files across all projects. It should have files like .prettierrc that define the coding standard for all the projects, etc.
+The idea is that you share config files across all projects. It should have files like `.prettierrc` that define the coding standard for all the projects, etc.
 
-Any user preferences don't live here - put them in your home directory
+Any user preferences don't live here - put them in your home directory, or whereever the application wants them to be.
 
 ## How to use this repository
 
@@ -12,18 +12,18 @@ Add it as a git submodule to your project. Run the below in the root directory o
 
 `$ git submodule add <this repository>`
 
-This creates a submodule in the dotfiles directory off your project root.
+This creates a submodule in the `dotfiles` directory off your project root.
 
 Then, for each config file, or config directory, that you want, symlink the git submodule file to the one in the project root directory,
 
-`$ ln -s dotfiles/projectroot/<config-fire-or-directory> <config-fire-or-directory>`
+`$ ln -s dotfiles/projectroot/<config-file-or-directory> <config-file-or-directory>`
 
 e.g.
 
 `$ ln -s dotfiles/projectroot/.prettierrc .prettierrc`
 
-> :grey_exclamation:
-> If you already have e.g. a `.prettierrc`, before you create the symlink, you may want to
+> [!TIP]
+> If you already have, e.g. a `.prettierrc`, before you create the symlink, you may want to
 >
 > `$ diff dotfiles/projectroot/.prettierrc .prettierrc`
 >
@@ -59,4 +59,4 @@ It's not tested on windows, where symlinks don't work so well.
 
 (try cmd /c mklink C:\Users\me\AppData\Roaming\Code\User\settings.json C:\git\config\.vscode\settings.json)
 
-Many don't like git submodules. Yes, I agree they are a [footer](https://en.wiktionary.org/wiki/footer#Etymology_3 "Scots word footer") but they do the job right for this purpose, at least, IMHO.
+Many don't like git submodules. Yes, I agree they are a [footer](https://en.wiktionary.org/wiki/footer#Etymology_3 'Scots word footer') but they do the job right for this purpose, at least, IMHO.
