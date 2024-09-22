@@ -59,25 +59,32 @@ This updates your `dotfiles` submodule and so all symlinked files are updated in
 
 ## Updating your local copy and pushing it to the source repository
 
-Make sure your git submodule is not detached - if it is:
+`$ cd dotfiles`
 
-`$ git checkout main`
+> [!WARNING]
+> Make sure your git submodule is not detached - if it is:
+>
+> `$ git checkout main`
+>
+> follow the instructions to create a new branch from the detached head, e.g.
+>
+> `$ git branch <new-branch-name> <the hash it gave you>`
+>
+> make sure main is up to date
+>
+> `$ git fetch`
+>
+> `$ git pull`
+>
+> switch it all to your new branch
+>
+> `$ git checkout <new-branch-name>`
+>
+> `$ git merge main`
 
-follow the instructions to create a new branch from the detached head, e.g.
+If the git submodule is not detached
 
-`$ git branch <new-branch-name> <the hash it gave you>`
-
-make sure main is up to date
-
-`$ git fetch`
-
-`$ git pull`
-
-switch it all to your new branch
-
-`$ git checkout <new-branch-name>`
-
-`$ git merge main`
+` $ git checkout <new-branch-name>`
 
 Everything is now on your new branch which you can now create a pull request from
 
