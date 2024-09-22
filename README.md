@@ -29,23 +29,24 @@ e.g.
 >
 > To check you're not trashing your own carefully crafted config. It should be stored in git anyway so you never lose anything.
 
-> :exclamation:
+> [!WARNING]
 > For `.vscode` files `settings.json` and `launch.json`, you need to symlink the directory, because for some reason (probably windows symlink limitations) symlinks for the files don't work:
 >
 > `$ ln -s dotfiles/projectroot/.vscode .vscode`
 
-There's no script to do this as others have done for good reasons:
+> [!NOTE]
+> There's no script to do this as others have done for good reasons:
+>
+> - You may not want all of it and this way allows you to link just the files you need
+> - The commands are easy to get right, and if you don't get it right first time it's easy to fix.
+> - It's a one-off command for a few files files, deal with it :smiley:
+> - Any script needs tests, etc. and my cost-benefit analysis resulted in not writing a script
 
-- You may not want all of it and this way allows you to link just the files you need
-- The commands are easy to get right, and if you don't get it right first time it's easy to fix.
-- It's a one-off command for a few files files, deal with it :smiley:
-- Any script needs tests, etc. and my cost-benefit analysis resulted in not writing a script
-
-So that there's a chance this might work on windows, do this:
-
-`$ git config --global core.symlinks true`
-
-This tells `git` to try its best with symlinks on windows.
+> [!TIP] So that there's a chance this might work on windows, do this:
+>
+> `$ git config --global core.symlinks true`
+>
+> This tells `git` to try its best with symlinks on windows.
 
 ## Benefits of this approach
 
@@ -59,4 +60,4 @@ It's not tested on windows, where symlinks don't work so well.
 
 (try cmd /c mklink C:\Users\me\AppData\Roaming\Code\User\settings.json C:\git\config\.vscode\settings.json)
 
-Many don't like git submodules. Yes, I agree they are a [footer](https://en.wiktionary.org/wiki/footer#Etymology_3 'Scots word footer') but they do the job right for this purpose, at least, IMHO.
+Many don't like git submodules. Yes, I agree they are a [footer](https://en.wiktionary.org/wiki/footer#Etymology_3 "Scots word footer") but they do the job right for this purpose, at least, IMHO.
