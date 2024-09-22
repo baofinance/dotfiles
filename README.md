@@ -67,9 +67,13 @@ follow the instructions to create a new branch from the detached head, e.g.
 
 `$ git branch <new-branch-name> <the hash it gave you>`
 
+make sure main is up to date
+
 `$ git fetch`
 
 `$ git pull`
+
+switch it all to your new branch
 
 `$ git checkout <new-branch-name>`
 
