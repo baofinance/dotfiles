@@ -42,7 +42,8 @@ e.g.
 > - It's a one-off command for a few files files, deal with it :smiley:
 > - Any script needs tests, etc. and my cost-benefit analysis resulted in not writing a script
 
-> [!TIP] So that there's a chance this might work on windows, do this:
+> [!TIP]
+> So that there's a chance this might work on windows, do this:
 >
 > `$ git config --global core.symlinks true`
 >
