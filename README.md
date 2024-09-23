@@ -20,7 +20,7 @@ Then, for each config file, or config directory, that you want, symlink the git 
 
 e.g.
 
-`$ ln -s dotfiles/projectroot/.prettierrc .prettierrc`
+`$ ln -s dotfiles/projectroot/.prettierrc .`
 
 > [!TIP]
 > If you already have, e.g. a `.prettierrc`, before you create the symlink, you may want to
@@ -29,10 +29,12 @@ e.g.
 >
 > To check you're not trashing your own carefully crafted config. It should be stored in git anyway so you never lose anything.
 
-> [!WARNING]
-> For `.vscode` files `settings.json` and `launch.json`, you need to symlink the directory, because for some reason (probably windows symlink limitations) symlinks for the files don't work:
+> [!TIP]
+> To list all your symbolic links, you may want to add this to your `package.json` "scripts" section:
 >
-> `$ ln -s dotfiles/projectroot/.vscode .vscode`
+> `"dotfiles": "git ls-tree -r HEAD | grep 120000"`
+>
+> vscode marks symbolic links in the "Explorer" in the sidebar with a ↪️ character on the right
 
 > [!NOTE]
 > There's no script to do this as others have done for good reasons:
