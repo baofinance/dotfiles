@@ -8,24 +8,31 @@ Any user preferences don't live here - put them in your home directory, or where
 
 ## How to use this repository
 
-Add it as a git submodule to your project. Run the below in the root directory of you project
+Add it as a forge package (a git submodule under the hood) to your project.
 
-`$ git submodule add <this repository>`
+```shell
+$ cd <project root>
+$ forge install baofinance/dotfiles
+```
 
-This creates a submodule in the `dotfiles` directory off your project root.
+This creates a library `lib/dotfiles` directory alonside all your other dependencies.
 
-Then, for each config file, or config directory, that you want, symlink the git submodule file to the one in the project root directory,
+Then, for each config file that you want, symlink the file in the `lib\dotfiles\projectroot` to the respective place in your project,
 
-`$ ln -s dotfiles/projectroot/<config-file-or-directory> <config-file-or-directory>`
-
+``` shell
+$ ln -s lib/dotfiles/projectroot/<config-file-or-directory> <config-file-or-directory>`
+```
 e.g.
 
-`$ ln -s dotfiles/projectroot/.prettierrc .`
+``` shell
+$ ln -s lib/dotfiles/projectroot/.prettierrc .`
+$ ln -s lib/dotfiles/projectroot/.vscode/settings.json .vscode`
+```
 
 > [!TIP]
 > If you already have, e.g. a `.prettierrc`, before you create the symlink, you may want to
 >
-> `$ diff dotfiles/projectroot/.prettierrc .prettierrc`
+> `$ diff lib/dotfiles/projectroot/.prettierrc .prettierrc`
 >
 > To check you're not trashing your own carefully crafted config. It should be stored in git anyway so you never lose anything.
 
@@ -50,45 +57,6 @@ e.g.
 > `$ git config --global core.symlinks true`
 >
 > This tells `git` to try its best with symlinks on windows.
-
-## Updating dotfiles from the source repository
-
-When someone else has added an enhancemenrt that you want do this:
-
-`$ git submodule update --remote dotfiles`
-
-This updates your `dotfiles` submodule and so all symlinked files are updated in one go. Magic!
-
-## Updating your local copy and pushing it to the source repository
-
-`$ cd dotfiles`
-
-> [!WARNING]
-> Make sure your git submodule is not detached - if it is:
->
-> `$ git checkout main`
->
-> follow the instructions to create a new branch from the detached head, e.g.
->
-> `$ git branch <new-branch-name> <the hash it gave you>`
->
-> make sure main is up to date
->
-> `$ git fetch`
->
-> `$ git pull`
->
-> switch it all to your new branch
->
-> `$ git checkout <new-branch-name>`
->
-> `$ git merge main`
-
-If the git submodule is not detached
-
-` $ git checkout <new-branch-name>`
-
-Everything is now on your new branch which you can now create a pull request from
 
 ## Benefits of this approach
 
