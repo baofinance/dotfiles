@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "solhint:recommended"
+  ],
+  "rules": {
+    "private-vars-leading-underscore": "error",
+    "interface-starts-with-i": "error",
+    "func-param-name-mixedcase": "error",
+    "modifier-name-mixedcase": "error"
+  }
+}
