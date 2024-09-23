@@ -20,14 +20,17 @@ This creates a library `lib/dotfiles` directory alonside all your other dependen
 Then, for each config file that you want, symlink the file in the `lib\dotfiles\projectroot` to the respective place in your project,
 
 ``` shell
-$ ln -s lib/dotfiles/projectroot/<config-file-or-directory> <config-file-or-directory>`
+$ ln -s .lib/dotfiles/projectroot/<config-file-or-directory> <config-file-or-directory>`
 ```
 e.g.
 
 ``` shell
-$ ln -s lib/dotfiles/projectroot/.prettierrc .`
-$ ln -s lib/dotfiles/projectroot/.vscode/settings.json .vscode`
+$ ln -s .lib/dotfiles/projectroot/.prettierrc .`
+$ ln -s ..lib/dotfiles/projectroot/.vscode/settings.json .vscode/settings.json`
 ```
+
+> [!WARNING]
+> make sure the symbolic link contains a relative path to the actual file.
 
 > [!TIP]
 > If you already have, e.g. a `.prettierrc`, before you create the symlink, you may want to
