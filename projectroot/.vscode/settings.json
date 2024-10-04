@@ -1,15 +1,4 @@
 {
-  // Tthese go with the forge vscode extension
-  "solidity.packageDefaultDependenciesContractsDirectory": "src",
-  "solidity.packageDefaultDependenciesDirectory": "lib",
-  "solidity.compileUsingRemoteVersion": "0.8.25",
-  //   "solidity.remappings": [
-  //     "ds-test/=lib/forge-std/lib/ds-test/src/",
-  //     "forge-std/=lib/forge-std/src/",
-  //     "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
-  //     "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
-  //   ],
-
   // project specific formatting, so try and align with prettierrc
   "prettier.documentSelectors": ["**/*.sol", "**/*.ts", "**/*.json", "**/*.yml"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -34,35 +23,22 @@
   // gnuplot
   "gnuplot.watcher.delay": 1000,
 
-  //"solidity.formatter": "prettier", // this uses a .pretierrc , see https://github.com/prettier-solidity/prettier-plugin-solidity#configuration-file
-  //"solidity.formatter": "forge", // TODO: check against prettier
   "[solidity]": {
     "editor.tabSize": 4
-    //"editor.defaultFormatter": "JuanBlanco.solidity"
-    //"editor.defaultFormatter": "NomicFoundation.hardhat-solidity",
   },
   "[yaml]": {
     "editor.tabSize": 2
   },
 
-  "markiscodecoverage.coverageThreshold": 80,
+  // extension: https://marketplace.visualstudio.com/items?itemName=markis.code-coverage
+  "markiscodecoverage.coverageThreshold": 90,
   "markiscodecoverage.searchCriteria": "lcov*.info",
-
   "workbench.colorCustomizations": {
-    // these below mess up the selection highlighting
-    //"markiscodecoverage.colorUncoveredLineText": "#FF7F2750",
-    //"markiscodecoverage.colorUncoveredLineText": "#FFFFFF"
-    //"editor.tokenColorCustomizations": {
-    //  "textMateRules": [
-    //      {
-    //          "scope": ["markiscodecoverage.colorUncoveredLineText"],
-    //          "settings": {
-    //              "foreground": "#FFFFFF"
-    //          }
-    //      }
-    //  ]
-    //}
+    "markiscodecoverage.colorUncoveredLineText": "#00000000",
+    "markiscodecoverage.insufficientCoverageForeground": "#1594E9FF"
   },
+
+  // extension: https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity
   "wake.compiler.solc.remappings": [
     "ds-test/=lib/forge-std/lib/ds-test/src/",
     "forge-std/=lib/forge-std/src/",
